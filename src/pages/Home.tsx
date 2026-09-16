@@ -95,7 +95,7 @@ interface RecentItem { id: number; name: string; price: number; imageUrl: string
 
 export function Home() {
   const { settings, homepageCategories, catUrl } = useSite()
-  const { banners, homeSections, testimonials: cmsTestimonials, whyItems, instagramPosts } = useCms()
+  const { banners, homeSections, whyItems, instagramPosts } = useCms()
 
   const [bestSellers, setBestSellers]           = useState<ProductListItem[]>([])
   const [newArrivals, setNewArrivals]           = useState<ProductListItem[]>([])
@@ -125,7 +125,6 @@ export function Home() {
     btn2Url:     banner?.btn2Url    ?? '/products/sortBy/newest',
   }
 
-  const trustItems = [settings.offerStrip1, settings.offerStrip2, settings.offerStrip3].filter(Boolean)
 
   const styleCards = (() => {
     const cats = homepageCategories.slice(0, 6).map(cat => ({

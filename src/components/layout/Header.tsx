@@ -25,7 +25,7 @@ export function Header() {
   const { user, isAuthenticated, logout } = useAuthStore()
   const { itemCount, openDrawer } = useCartStore()
   const { items: wishlistItems } = useWishlistStore()
-  const { settings, parentCategories, childrenOf, catUrl } = useSite()
+  const { settings, parentCategories, catUrl } = useSite()
   const { navItems, homeSections } = useCms()
   const announcementEnabled = homeSections.length === 0 || (homeSections.find(s => s.sectionKey === 'announcement')?.isEnabled ?? true)
 
