@@ -1,6 +1,4 @@
-import axios from 'axios'
-
-const api = axios.create({ baseURL: '/api' })
+import { apiClient as api } from './client'
 
 export interface NavItem {
   id: number; label: string; url: string; parentId: number | null
